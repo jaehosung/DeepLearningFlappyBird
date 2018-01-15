@@ -4,16 +4,16 @@ from __future__ import print_function
 import tensorflow as tf
 import cv2
 import sys
-sys.path.append("game/")
+sys.path.append("new/")
 import wrapped_flappy_bird as game
 import random
 import numpy as np
 from collections import deque
 
 GAME = 'bird' # the name of the game being played for log files
-ACTIONS = 2 # number of valid actions
+ACTIONS = 5 # number of valid actions
 GAMMA = 0.99 # decay rate of past observations
-OBSERVE = 100000. # timesteps to observe before training
+OBSERVE = 1000000 # timesteps to observe before training
 EXPLORE = 2000000. # frames over which to anneal epsilon
 FINAL_EPSILON = 0.0001 # final value of epsilon
 INITIAL_EPSILON = 0.0001 # starting value of epsilon
@@ -103,8 +103,8 @@ def trainNetwork(s, readout, h_fc1, sess):
 
     # saving and loading networks
     saver = tf.train.Saver()
-    sess.run(tf.initialize_all_variables())
-    checkpoint = tf.train.get_checkpoint_state("saved_networks")
+    sess.run(tf.global_variables_initializer())
+    checkpoint = tf.train.get_checkpoint_state("saved_newnetworks")
     if checkpoint and checkpoint.model_checkpoint_path:
         saver.restore(sess, checkpoint.model_checkpoint_path)
         print("Successfully loaded:", checkpoint.model_checkpoint_path)
@@ -181,7 +181,7 @@ def trainNetwork(s, readout, h_fc1, sess):
 
         # save progress every 10000 iterations
         if t % 10000 == 0:
-            saver.save(sess, 'saved_networks/' + GAME + '-dqn', global_step = t)
+            saver.save(sess, 'saved_newnetworks/' + GAME + '-dqn', global_step = t)
 
         # print info
         state = ""
