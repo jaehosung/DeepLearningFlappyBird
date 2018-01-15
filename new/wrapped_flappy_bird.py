@@ -213,4 +213,4 @@ class GameState:
 
 
 
-        return image_data, reward, terminal
+        return image_data, reward, terminal,self.growsnake
