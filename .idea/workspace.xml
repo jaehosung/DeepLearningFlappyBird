@@ -6,23 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="58a2c04c-9160-47db-bcaf-a6660f2a6c42" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/deep_q_network_test.py" afterPath="$PROJECT_DIR$/deep_q_network_test.py" />
       <change beforePath="$PROJECT_DIR$/new/wrapped_flappy_bird.py" afterPath="$PROJECT_DIR$/new/wrapped_flappy_bird.py" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-10000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-10000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-10000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-20000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-20000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-20000.meta" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_newnetworks/checkpoint" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,8 +75,8 @@
           <file leaf-file-name="deep_q_network_test.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deep_q_network_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+                <state relative-caret-position="162">
+                  <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
                   <folding>
                     <element signature="e#22#59#0" expanded="true" />
                   </folding>
@@ -127,8 +117,8 @@
           <file leaf-file-name="wrapped_flappy_bird.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/new/wrapped_flappy_bird.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+                <state relative-caret-position="331">
+                  <caret line="174" column="32" lean-forward="true" selection-start-line="174" selection-start-column="32" selection-end-line="174" selection-end-column="32" />
                   <folding>
                     <element signature="e#383#401#0" expanded="true" />
                   </folding>
@@ -176,7 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>applexy</find>
       <find>clock</find>
       <find>pygame.init</find>
       <find>gameregulator</find>
@@ -206,6 +195,7 @@
       <find>reward</find>
       <find>print</find>
       <find>print</find>
+      <find>growsnake</find>
     </findStrings>
     <replaceStrings>
       <replace>reward</replace>
@@ -219,8 +209,8 @@
       <list>
         <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
         <option value="$PROJECT_DIR$/deep_q_network.py" />
-        <option value="$PROJECT_DIR$/deep_q_network_test.py" />
         <option value="$PROJECT_DIR$/new/wrapped_flappy_bird.py" />
+        <option value="$PROJECT_DIR$/deep_q_network_test.py" />
       </list>
     </option>
   </component>
@@ -628,22 +618,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_q_network_test.py">
+    <entry file="file://$PROJECT_DIR$/new/wrapped_flappy_bird.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="331">
+          <caret line="174" column="32" lean-forward="true" selection-start-line="174" selection-start-column="32" selection-end-line="174" selection-end-column="32" />
           <folding>
-            <element signature="e#22#59#0" expanded="true" />
+            <element signature="e#383#401#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new/wrapped_flappy_bird.py">
+    <entry file="file://$PROJECT_DIR$/deep_q_network_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="162">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
-            <element signature="e#383#401#0" expanded="true" />
+            <element signature="e#22#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

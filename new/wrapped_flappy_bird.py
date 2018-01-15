@@ -170,13 +170,16 @@ class GameState:
             self.appleonscreen = 0
             self.score = self.score + 1
             self.growsnake = self.growsnake + 1
-            reward = 1
-        elif self.growsnake > 0:
-            self.growsnake = self.growsnake + 1
-            if self.growsnake == self.snakegrowunit:
-                self.growsnake = 0
+            reward = 100
         else:
             self.snakelist.pop()
+
+        '''
+        # elif self.growsnake > 0:
+        #     self.growsnake = self.growsnake + 1
+        #     if self.growsnake == self.snakegrowunit:
+        #         self.growsnake = 0
+        '''
 
         if self.snakedead:
             terminal = True
