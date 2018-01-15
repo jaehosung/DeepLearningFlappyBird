@@ -58,7 +58,7 @@ Y_apple = WINSIZE[1] / SNAKESTEP
 TRUE = 1
 FALSE = 0
 
-
+prevDir = RIGHT
 
 
 ######## ######## ########
@@ -78,8 +78,8 @@ screen.fill(BLACK)
 
 class GameState:
     def __init__(self):
-        self.direction = DOWN  # 1=up,2=right,3=down,4=left
-        self.snakexy = [ WINSIZE[0] / 2, WINSIZE[1] / 2]
+        self.direction = RIGHT  # 1=up,2=right,3=down,4=left
+        self.snakexy = [1, WINSIZE[1] / 2]
         self.snakelist = [[300, 400], [280, 400], [260, 400]]
         self.counter = 0
         self.score = 0
@@ -91,11 +91,12 @@ class GameState:
         self.growsnake = 0  # added to grow tail by two each time
         self.snakegrowunit = 2  # added to grow tail by two each time
         self.applexy = [0,0]
-        self.reward = 0.1
 
     def frame_step(self, input_actions):
 
         # pygame.event.pump()
+
+        reward = 0.1
 
         terminal = False
 
@@ -114,15 +115,20 @@ class GameState:
         # print(self.snakexy,self.snakedead,"dir :",self.direction,"input :", input_actions)
 
 
+
         #direction Change it depends on input direction
         if input_actions[4] == 1 and (not self.direction == RIGHT):
             self.direction = LEFT
+            prevDir = LEFT
         elif input_actions[2] == 1 and (not self.direction == LEFT):
             self.direction = RIGHT
+            prevDir = RIGHT
         elif input_actions[1] == 1 and (not self.direction == DOWN):
             self.direction = UP
+            prevDir = UP
         elif input_actions[3] == 1 and (not self.direction == UP):
             self.direction = DOWN
+            prevDir = DOWN
 
         if self.direction == RIGHT:
             self.snakexy[0] = self.snakexy[0] + SNAKESTEP
@@ -164,7 +170,7 @@ class GameState:
             self.appleonscreen = 0
             self.score = self.score + 1
             self.growsnake = self.growsnake + 1
-            self.reward = 10
+            reward = 1
         elif self.growsnake > 0:
             self.growsnake = self.growsnake + 1
             if self.growsnake == self.snakegrowunit:
@@ -176,7 +182,7 @@ class GameState:
             terminal = True
             # print("===RESTART===")
             self.__init__()
-            self.reward = -100
+            reward = -1
 
         #render
         ###### RENDER THE SCREEN ###############
@@ -200,9 +206,8 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         pygame.display.update()
-        # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
 
 
 
 
-        return image_data, self.reward, terminal
+        return image_data, reward, terminal

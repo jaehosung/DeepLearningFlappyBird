@@ -6,8 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="58a2c04c-9160-47db-bcaf-a6660f2a6c42" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/deep_q_network.py" afterPath="$PROJECT_DIR$/deep_q_network.py" />
+      <change beforePath="$PROJECT_DIR$/deep_q_network_test.py" afterPath="$PROJECT_DIR$/deep_q_network_test.py" />
       <change beforePath="$PROJECT_DIR$/new/wrapped_flappy_bird.py" afterPath="$PROJECT_DIR$/new/wrapped_flappy_bird.py" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-30000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-40000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-50000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-60000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.data-00000-of-00001" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.index" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/bird-dqn-70000.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/saved_newnetworks/checkpoint" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +39,7 @@
     <SUITE FILE_PATH="coverage/DeepLearningFlappyBird$session.coverage" NAME="session Coverage Results" MODIFIED="1516020541974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/tensorflow3/lib/python3.5/site-packages/tensorflow/python/client" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4837476">
+    <splitter split-orientation="horizontal" split-proportion="0.41873804">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Python/#/home/jay/week3/DeepLearningFlappyBird/deep_q_network.py" pinned="false" current-in-tab="false">
@@ -69,8 +85,8 @@
           <file leaf-file-name="deep_q_network_test.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deep_q_network_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+                <state relative-caret-position="270">
+                  <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
                   <folding>
                     <element signature="e#22#59#0" expanded="true" />
                   </folding>
@@ -111,7 +127,7 @@
           <file leaf-file-name="wrapped_flappy_bird.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/new/wrapped_flappy_bird.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
+                <state relative-caret-position="223">
                   <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
                   <folding>
                     <element signature="e#383#401#0" expanded="true" />
@@ -133,8 +149,8 @@
           <file leaf-file-name="flappy_bird_utils.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+                <state relative-caret-position="543">
+                  <caret line="77" column="6" lean-forward="false" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
@@ -145,8 +161,8 @@
           <file leaf-file-name="wrapped_flappy_bird.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="827">
-                  <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+                <state relative-caret-position="187">
+                  <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -160,9 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GAME</find>
-      <find>2</find>
-      <find>open</find>
       <find>applexy</find>
       <find>clock</find>
       <find>pygame.init</find>
@@ -178,7 +191,6 @@
       <find>screnn</find>
       <find>sc</find>
       <find>all_</find>
-      <find>reward</find>
       <find>FPS</find>
       <find>new</find>
       <find>net</find>
@@ -187,10 +199,17 @@
       <find>saved</find>
       <find>timestep</find>
       <find>terminal</find>
-      <find>print</find>
       <find>20</find>
       <find>self.reward</find>
+      <find>snakexy</find>
+      <find>score</find>
+      <find>reward</find>
+      <find>print</find>
+      <find>print</find>
     </findStrings>
+    <replaceStrings>
+      <replace>reward</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -531,16 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/tensorflow3/lib/python3.5/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14544">
@@ -599,10 +608,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="77" column="6" lean-forward="false" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -611,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deep_q_network_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="e#22#59#0" expanded="true" />
           </folding>
@@ -621,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new/wrapped_flappy_bird.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="223">
           <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
           <folding>
             <element signature="e#383#401#0" expanded="true" />
