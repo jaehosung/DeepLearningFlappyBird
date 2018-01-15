@@ -22,7 +22,7 @@ from itertools import cycle
 counter = 0
 
 
-FPS = 10
+FPS = 10000
 
 
 
@@ -38,7 +38,7 @@ BLACK = [0, 0, 0]
 RED = [255, 0, 0]
 GREEN = [0, 255, 0]
 
-BLOCKSIZE = [20, 20]
+BLOCKSIZE = [15, 15]
 
 UP = 1
 DOWN = 3
@@ -78,8 +78,8 @@ screen.fill(BLACK)
 
 class GameState:
     def __init__(self):
-        self.direction = UP  # 1=up,2=right,3=down,4=left
-        self.snakexy = [0, WINSIZE[1] / 2]
+        self.direction = DOWN  # 1=up,2=right,3=down,4=left
+        self.snakexy = [ WINSIZE[0] / 2, WINSIZE[1] / 2]
         self.snakelist = [[300, 400], [280, 400], [260, 400]]
         self.counter = 0
         self.score = 0
@@ -110,28 +110,35 @@ class GameState:
         # input_actions[3] == 1: snake down
         # input_actions[4] == 1: snake left
 
+
+        # print(self.snakexy,self.snakedead,"dir :",self.direction,"input :", input_actions)
+
+
         #direction Change it depends on input direction
-        if input_actions[4] == 1 and not self.direction == RIGHT:
+        if input_actions[4] == 1 and (not self.direction == RIGHT):
             self.direction = LEFT
-        elif input_actions[2] == 1 and not self.direction == LEFT:
+        elif input_actions[2] == 1 and (not self.direction == LEFT):
             self.direction = RIGHT
-        elif input_actions[1] == 1 and not self.direction == DOWN:
+        elif input_actions[1] == 1 and (not self.direction == DOWN):
             self.direction = UP
-        elif input_actions[3] == 1 and not self.direction == UP:
+        elif input_actions[3] == 1 and (not self.direction == UP):
             self.direction = DOWN
 
-        if self.direction == UP:
+        if self.direction == RIGHT:
             self.snakexy[0] = self.snakexy[0] + SNAKESTEP
             if self.snakexy[0] > MAXX:
                 self.snakedead = TRUE
+
         elif self.direction == LEFT:
             self.snakexy[0] = self.snakexy[0] - SNAKESTEP
             if self.snakexy[0] < MINX:
                 self.snakedead = TRUE
+
         elif self.direction == UP:
             self.snakexy[1] = self.snakexy[1] - SNAKESTEP
             if self.snakexy[1] < MINY:
                 self.snakedead = TRUE
+
         elif self.direction == DOWN:
             self.snakexy[1] = self.snakexy[1] + SNAKESTEP
             if self.snakexy[1] > MAXY:
@@ -165,14 +172,11 @@ class GameState:
         else:
             self.snakelist.pop()
 
-
         if self.snakedead:
             terminal = True
+            # print("===RESTART===")
             self.__init__()
             self.reward = -100
-        else:
-            self.reward = 0.1
-
 
         #render
         ###### RENDER THE SCREEN ###############
@@ -197,5 +201,8 @@ class GameState:
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         pygame.display.update()
         # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
+
+
+
 
         return image_data, self.reward, terminal
