@@ -22,7 +22,7 @@ from itertools import cycle
 counter = 0
 
 
-FPS = 20
+FPS = 10000
 
 
 

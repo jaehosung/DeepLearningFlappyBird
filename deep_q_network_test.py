@@ -194,7 +194,7 @@ def trainNetwork(s, readout, h_fc1, sess):
             state = "train"
 
         print("TIMESTEP", t, "/ STATE", state, \
-            "/ EPSILON", epsilon, "/ ACTION", action_index, "length",length,"DEATH", DEATH, "/ REWARD", r_t, \
+            "/ EPSILON", epsilon, "/ ACTION", action_index, "length",length, "/ REWARD", r_t, \
             "/ Q_MAX %e" % np.max(readout_t), end = "")
         # write info to files
 
