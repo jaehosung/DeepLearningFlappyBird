@@ -22,14 +22,14 @@ from itertools import cycle
 counter = 0
 
 
-FPS = 10000
+FPS = 20
 
 
 
 
 ######## CONSTANTS
 
-WINSIZE = [200, 200]
+WINSIZE = [120, 120]
 SCREENWIDTH  = WINSIZE[0]
 SCREENHEIGHT = WINSIZE[1]
 
@@ -79,7 +79,7 @@ screen.fill(BLACK)
 class GameState:
     def __init__(self):
         self.direction = RIGHT  # 1=up,2=right,3=down,4=left
-        self.snakexy = [1, WINSIZE[1] / 2]
+        self.snakexy = [SNAKESTEP, WINSIZE[1] / 2]
         self.snakelist = [[300, 400], [280, 400], [260, 400]]
         self.counter = 0
         self.score = 0
@@ -164,53 +164,49 @@ class GameState:
             self.appleonscreen = 1
 
         self.snakelist.insert(0, list(self.snakexy))
-
+        # print(self.snakexy,self.applexy)
         # TODO ADD reward
         if self.snakexy[0] == self.applexy[0] and self.snakexy[1] == self.applexy[1]:
             self.appleonscreen = 0
             self.score = self.score + 1
             self.growsnake = self.growsnake + 1
             reward = 100
-        else:
-            self.snakelist.pop()
-
-        '''
         # elif self.growsnake > 0:
         #     self.growsnake = self.growsnake + 1
         #     if self.growsnake == self.snakegrowunit:
         #         self.growsnake = 0
-        '''
+        else:
+            self.snakelist.pop()
 
         if self.snakedead:
             terminal = True
-            # print("===RESTART===")
+            print("===RESTART===")
             self.__init__()
             reward = -1
+
+        test = self.growsnake
 
         #render
         ###### RENDER THE SCREEN ###############
 
-        ###### Clear the screen
+        # Clear the screen
         screen.fill(BLACK)
-        ###### Output the array elements to the screen as rectangles ( the snake)
+        # Output the array elements to the screen as rectangles ( the snake)
         for element in self.snakelist:
             pygame.draw.rect(screen, RED, Rect(element, BLOCKSIZE))
 
-        ###### Draw the apple
+        # Draw the apple
         pygame.draw.rect(screen, GREEN, Rect(self.applexy, BLOCKSIZE))
 
-        ###### Flip the screen to display everything we just changed
+        # Flip the screen to display everything we just changed
         pygame.display.flip()
 
-        self.gameregulator = self.gameregulator + 1
-
-
+        image_data = pygame.surfarray.array3d(pygame.display.get_surface())
+        # pygame.display.update()
         clock.tick(FPS)
 
-        image_data = pygame.surfarray.array3d(pygame.display.get_surface())
-        pygame.display.update()
 
 
 
 
-        return image_data, reward, terminal,self.growsnake
+        return image_data, reward, terminal,len(self.snakelist)
