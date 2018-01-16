@@ -20,6 +20,7 @@ INITIAL_EPSILON = 0.0001 # starting value of epsilon
 REPLAY_MEMORY = 50000 # number of previous transitions to remember
 BATCH = 32 # size of minibatch
 FRAME_PER_ACTION = 1
+DEATH = True
 
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev = 0.01)
@@ -193,8 +194,8 @@ def trainNetwork(s, readout, h_fc1, sess):
             state = "train"
 
         print("TIMESTEP", t, "/ STATE", state, \
-            "/ EPSILON", epsilon, "/ ACTION", action_index, "length",length, "/ REWARD", r_t, \
-            "/ Q_MAX %e" % np.max(readout_t))
+            "/ EPSILON", epsilon, "/ ACTION", action_index, "length",length,"DEATH", DEATH, "/ REWARD", r_t, \
+            "/ Q_MAX %e" % np.max(readout_t), end = "")
         # write info to files
 
 

@@ -91,6 +91,7 @@ class GameState:
         self.growsnake = 0  # added to grow tail by two each time
         self.snakegrowunit = 2  # added to grow tail by two each time
         self.applexy = [0,0]
+        DEATH = False
 
     def frame_step(self, input_actions):
 
@@ -178,11 +179,15 @@ class GameState:
         else:
             self.snakelist.pop()
 
+
         if self.snakedead:
             terminal = True
-            print("===RESTART===")
+            print("=DEATH")
             self.__init__()
             reward = -1
+        else:
+            print("")
+
 
         test = self.growsnake
 
